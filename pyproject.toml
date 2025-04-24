@@ -1,0 +1,17 @@
+[project]
+name = "pydator"
+version = "0.1.0"
+description = "A simple and hands-on validation library for Python."
+authors = [
+    { name = "Seam Uddin", email = "seamuddin.me@gmail.com" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://github.com/seamuddin/pydator"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
