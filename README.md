@@ -1,6 +1,8 @@
 # Pydator
+[![CI](https://img.shields.io/github/actions/workflow/status/seamuddin/pydator/python-app.yml
+)](https://github.com/seamuddin/pydator/actions/runs/14643101580)
 
-[![CI](https://github.com/seamuddin/pydator/workflows/CI/badge.svg?event=push)](https://github.com/seamuddin/pydator/actions?query=event%3Apush+branch%3Amain+workflow%3ACI)
+
 [![Coverage](https://img.shields.io/codecov/c/github/seamuddin/pydator)](https://codecov.io/gh/seamuddin/pydator)
 [![PyPI version](https://img.shields.io/pypi/v/pydator.svg)](https://pypi.org/project/pydator/)
 [![Conda-Forge](https://img.shields.io/conda/v/conda-forge/pydator.svg)](https://anaconda.org/conda-forge/pydator)
