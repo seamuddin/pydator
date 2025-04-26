@@ -2,7 +2,6 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/seamuddin/pydator/python-app.yml
 )](https://github.com/seamuddin/pydator/actions/runs/14643101580)
 [![PyPI version](https://img.shields.io/pypi/v/pydator.svg)](https://pypi.org/project/pydator/)
-![Downloads](https://img.shields.io/pypi/dm/pydator)
 [![Python Versions](https://img.shields.io/pypi/v/Pydator)](https://pypi.org/project/pydator/)
 [![License](https://img.shields.io/github/license/seamuddin/pydator.svg)](https://github.com/seamuddin/pydator/blob/main/LICENSE)
 
