@@ -12,20 +12,3 @@ from pydator.rules.float_rule import FloatRule
 from pydator.rules.url import UrlRule
 from pydator.rules.integer import IntegerRule
 from pydator.rules.contains import ContainsRule
-
-RULES = {
-    "required": RequiredRule(),
-    "string": StringRule(),
-    "number": NumberRule(),
-    "min": MinRule(),
-    "max": MaxRule(),
-    "email": EmailRule(),
-    "boolean": BooleanRule(),
-    "in": InRule(),
-    "regex": RegexRule(),
-    "date": DateRule(),
-    "float": FloatRule(),
-    "url": UrlRule(),
-    "integer": IntegerRule(),
-    "contains": ContainsRule(),
-}
