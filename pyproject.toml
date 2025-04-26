@@ -1,17 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "pydator"
 version = "1.1.1"
 description = "A simple and hands-on validation library for Python."
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
 authors = [
     { name = "Seam Uddin", email = "seamuddin.me@gmail.com" }
 ]
-license = "MIT"
-readme = "README.md"
-requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
 
 [project.urls]
 Homepage = "https://github.com/seamuddin/pydator"
-
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
+Repository = "https://github.com/seamuddin/pydator"
+Bug Tracker = "https://github.com/seamuddin/pydator/issues"
+Documentation = "https://github.com/seamuddin/pydator#readme"
