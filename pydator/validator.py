@@ -1,8 +1,6 @@
-# Copyright (c) [2025] [Seam Uddin]
-# This file is licensed under the MIT License.
-
 from pydator.rules import RULES
 from pydator.exceptions import ValidationError
+
 
 class Validator:
     def __init__(self, data, rules, custom_messages=None):
@@ -21,11 +19,17 @@ class Validator:
             for rule in field_rules:
                 rule_name, *params = rule.split(":")
                 params = params[0].split(",") if params else []
-                validator_func = RULES.get(rule_name)
-                if validator_func:
-                    # Adjusted to pass parameters correctly
-                    is_valid, default_message = validator_func(value, *params)
+                rule_instance = RULES.get(rule_name)
+
+                if rule_instance:
+                    is_valid, default_message = rule_instance(value, *params)
                     if not is_valid:
                         custom_message = self.custom_messages.get(f"{field}.{rule_name}", default_message)
                         self.errors.setdefault(field, []).append(custom_message)
         return not bool(self.errors)
+
+    def fails(self):
+        return not self.validate()
+
+    def get_errors(self):
+        return self.errors

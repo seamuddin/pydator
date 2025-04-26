@@ -1,6 +1,6 @@
 [project]
 name = "pydator"
-version = "0.1.0"
+version = "1.1.0"
 description = "A simple and hands-on validation library for Python."
 authors = [
     { name = "Seam Uddin", email = "seamuddin.me@gmail.com" }
