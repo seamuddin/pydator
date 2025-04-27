@@ -12,3 +12,4 @@ from pydator.rules.float_rule import FloatRule
 from pydator.rules.url import UrlRule
 from pydator.rules.integer import IntegerRule
 from pydator.rules.contains import ContainsRule
+from pydator.base_rule import BaseRule
