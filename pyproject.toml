@@ -4,14 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pydator"
-version = "1.2.0"
+version = "1.2.1"
 description = "A simple and hands-on validation library for Python."
 readme = "README.md"
 requires-python = ">=3.6"
 license = "MIT"
-authors = [
-    { name = "Seam Uddin", email = "seamuddin.me@gmail.com" }
-]
+authors = ["Seam uddin <seamuddin.me@gmail.com>"]
+
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
