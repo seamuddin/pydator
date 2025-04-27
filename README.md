@@ -172,25 +172,44 @@ else:
 
 ## Extending with Custom Rules
 
-You can create custom validation rules by extending the `rules.py` module:
+You can create custom validation rules by extending the BaseRule class:
 
 ```python
-from pydator.rules import RULES
+from pydator.base_rule import BaseRule
+from pydator.validator import Validator
+# Define a custom rule by extending BaseRule
+class EvenNumberRule(BaseRule):
+    def __call__(self, value, *args):
+        if not isinstance(value, int):
+            return False, self.message("even_number")
+        
+        if value % 2 != 0:
+            return False, self.message("even_number")
+        
+        return True, None
 
-def phone_number(value):
-    import re
-    pattern = r'^\+?[1-9]\d{1,14}$'
-    if not re.match(pattern, str(value)):
-        return False
-    return True
+    def message(self, field, *args):
+        return f"The {field} must be an even number."
 
-# Add your custom rule to the RULES dictionary
-RULES["phone"] = phone_number
+# Register the custom rule
+Validator.register_rule("even_number", EvenNumberRule())
 
-# Now you can use it in your validation rules
-rules = {
-    "contact": ["required", "phone"]
+# Now you can use your custom rule in validation
+data = {
+    "number": 5
 }
+
+rules = {
+    "number": ["required", "even_number"]
+}
+
+validator = Validator(data, rules)
+
+if validator.validate():
+    print("Validation passed!")
+else:
+    print("Validation errors:", validator.errors)
+
 ```
 
 ## Why Pydator?
