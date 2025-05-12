@@ -11,6 +11,7 @@ data = {
     "password": "SecurePass123!",
     "confirm_password": "SecurePass123!",
     "referral_code": "ABC123XYZ",
+    "color": "orange",
 }
 
 rules = {
@@ -24,6 +25,7 @@ rules = {
     "confirm_password": ["required", "string", "min_length:8"],
     "referral_code": ["string", "length:9", "alphanumeric"],
     "ip_address": ["required", "string"],
+    "color": ["in:red,green,blue"]
  }
 
 messages = {
@@ -51,6 +53,7 @@ messages = {
     "confirm_password.min_length": "Confirmation password must be at least 8 characters long.",
     "referral_code.length": "Referral code must be exactly 9 characters long.",
     "referral_code.alphanumeric": "Referral code must be alphanumeric.",
+    "color.in": "Color must be one of the following: red, green, blue.",
 }
 
 validator = Validator(data, rules, messages)
