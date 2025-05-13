@@ -1,0 +1,25 @@
+# .readthedocs.yaml
+version: 1.2.0
+
+# Build settings
+build:
+  os: ubuntu-20.04
+  tools:
+    python: "3.12"
+
+# Sphinx settings
+sphinx:
+  configuration: docs/conf.py  # Path to your Sphinx config file (adjust if different)
+
+# Requirements
+python:
+  install:
+    - requirements: docs/requirements.txt  # If you have extra requirements for building docs
+
+# Optional settings for the Read the Docs theme and branding
+theme:
+  name: sphinx_rtd_theme
+
+# Extra settings if needed for your package
+extra_requirements:
+  - extra_requirements.txt  # Additional requirements if your project has them
