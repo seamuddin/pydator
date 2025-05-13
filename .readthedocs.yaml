@@ -1,5 +1,5 @@
 # .readthedocs.yaml
-version: 1.2.0
+version: 1
 
 # Build settings
 build:
